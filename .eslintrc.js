@@ -31,24 +31,25 @@ module.exports = {
     ],
     root: true,
     rules: {
+        // occur error in `import React from 'react'` with react-scripts 4.0.1
         'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define':[
+        '@typescript-eslint/no-use-before-define': [
             'error',
         ],
-        'lines-between-class-members':[
+        'lines-between-class-members': [
             'error',
             'always',
             {
-                exceptAfterSingleLine: true
-            }
+                exceptAfterSingleLine: true,
+            },
         ],
-        'no-void':[
+        'no-void': [
             'error',
             {
                 allowAsStatement: true,
             },
         ],
-        'padding-line-between-statements':[
+        'padding-line-between-statements': [
             'error',
             {
                 blankLine: 'always',
@@ -56,7 +57,7 @@ module.exports = {
                 next: 'return',
             },
         ],
-        '@typescript-eslint/no-unused-vars':[
+        '@typescript-eslint/no-unused-vars': [
             'error',
             {
                 'vars': 'all',
@@ -66,7 +67,7 @@ module.exports = {
                 'varsIgnorePattern': '_',
             },
         ],
-        'import/extensions':[
+        'import/extensions': [
             'error',
             'ignorePackages',
             {
@@ -74,15 +75,15 @@ module.exports = {
                 jsx: 'never',
                 ts: 'never',
                 tsx: 'never',
-            }
+            },
         ],
-        'react/jsx-filename-extension':[
+        'react/jsx-filename-extension': [
             'error',
             {
-                extensions:['.jsx', '.tsx']
-            }
+                extensions: ['.jsx', '.tsx'],
+            },
         ],
-        'react/jsx-props-no-spreading':[
+        'react/jsx-props-no-spreading': [
             'error',
             {
                 html: 'enforce',
@@ -92,7 +93,7 @@ module.exports = {
         ],
         'react/react-in-jsx-scope': 'off',
     },
-    overrides:[
+    overrides: [
         {
             'files': ['*.tsx'],
             'rules': {
@@ -100,8 +101,8 @@ module.exports = {
             },
         },
     ],
-    settings:{
-        'import/resolver':{
+    settings: {
+        'import/resolver': {
             node: {
                 paths: ['src'],
             },
